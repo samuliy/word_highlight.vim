@@ -29,10 +29,5 @@ endfunction
 augroup WordHighlight
 	autocmd!
 	au WinLeave * call <sid>clear_whl_matches()
-	au FileType perl
-		\ au CursorMoved <buffer> call <sid>whl_word()
-	au FileType perl6
-		\ au CursorMoved <buffer> call <sid>whl_word()
-	au FileType php
-		\ au CursorMoved <buffer> call <sid>whl_word()
+	au CursorMoved <buffer> call <sid>whl_word()
 augroup END
